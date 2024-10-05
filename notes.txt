@@ -1,0 +1,162 @@
+interpreted language
+complied language
+
+interpreted
+lang will read the code (read)-> convert -> execute
+
+in compiled
+read-> execute
+
+dynamic and static lang
+
+coding convention rules
+comment rules
+/* to write multiline comment
+don't write comment after ;
+
+naming convention
+has passed exam don't shorten it like bool  hpe = True
+name it meaningfully 
+bool has_passed_exam = True(snake casing)
+in c# use camel casing
+bool hasPassedExam = True
+in classes use the 1st letter capital (pascal casing)
+bool HasPassedExam = True
+
+never re-use variable
+
+after a condition leave a space
+
+c#
+program.cs  to run |  dotnet run
+Console.WriteLine("hello world");
+File.Open();
+Console.   -- it will list out everything
+
+for new line \n in Linux it will understand
+Console.WriteLine("hello 
+
+
+CLS- Common Language Specification 
+
+Base class library - set of library that a framework gives you
+
+CLR- Common Language Runtime-functionalities like removing garbage values like these
+
+example
+int i = 1;
+ string name = "Program";
+
+some other day it will be like
+
+var j = 1;
+var fullName = "Program";
+https://t.me/mishelshaji
+
+8138863533
+
+subject software development and 
+
+solution explores - to view all files and prjc associated with the solution
+
+value type and reference type
+
+nullable type and non-nullable type
+int x = null; // is not valid
+to make it nullable type
+int? x = null;
+
+signed datatype & unsigned datatype
+signed variable example = int i = -1;
+unsigned = unit ui = -1;
+
+basic type in #
+
+byte b = 1;
+minimum possible value to store in a datatype is
+Console.WriteLine(datatype.Minvalue);
+Console.WriteLine(datatype.Maxvalue);
+
+sbyte we can store negative value
+
+int in c is short
+short s = 1;
+
+int and uint
+
+long l = 1;
+ulong ul = 1;
+
+1.1 is double in c#
+
+float is there in c#
+if you want to use float itself u should append an F
+float f = 1.1F;
+
+decimal de =1.1M;
+
+byte b = 1;
+Console.WriteLine(byte.MinValue);
+Console.WriteLine(byte.MaxValue);
+ 
+sbyte sb = -1;
+Console.WriteLine(sbyte.MinValue);
+Console.WriteLine(sbyte.MaxValue);
+ 
+short s = 1;
+Console.WriteLine(short.MinValue);
+Console.WriteLine(short.MaxValue);
+ 
+ushort us = 1;
+Console.WriteLine(ushort.MinValue);
+Console.WriteLine(ushort.MaxValue);
+ 
+int i = 1;
+Console.WriteLine(int.MinValue);
+Console.WriteLine(int.MaxValue);
+ 
+uint ui = 1;
+Console.WriteLine(uint.MinValue);
+Console.WriteLine(uint.MaxValue);
+ 
+long l = 1;
+Console.WriteLine(long.MinValue);
+Console.WriteLine(long.MaxValue);
+ 
+ulong ul = 1;
+Console.WriteLine(ulong.MinValue);
+Console.WriteLine(ulong.MaxValue);
+ 
+float f = 1.1F;
+double d = 1.1;
+decimal de = 1.1M;
+
+bool b = false;
+char c = 'a';
+object o = 1;  && dynamic 0 =1;  ||  can hold any datatype's
+
+10000 is difficult to read we use10.000 in c# we can use like 10_000.
+
+if we want to use a keyword as a variable use @
+internal class program
+class is keyword
+as variable int @class = 5;
+
+var is a keyword not datatype
+UTF -16 IS USED  for encoding in c#
+char holds a single character, character which is present in  ASCII table 
+
+char c1='A';
+char c2='B';
+if(c2>c1) // 66>65  || ASCII value comparison
+{
+	Console.WriteLine("Hello");
+}
+
+
+modifying a string by index is not possible if it is an array its possible
+
+LOOPING STATEMENT
+
+for(int i = 0; i < 10 ;i++)
+{...}
