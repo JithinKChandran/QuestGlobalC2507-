@@ -11,6 +11,149 @@ namespace WPF
     {
         static void Main(string[] args)
         {
+              // string firstName = "jithin";
+              // string lastName = "chandran";
+              // int age = 21;
+              // string fName = $"{firstName} {lastName} is {age} year's old";
+              // Console.WriteLine(fName);
+              // Console.ReadKey();
+            
+              // Console.WriteLine("Hi, your name?");
+              // string name = Console.ReadLine();
+            
+              // Console.WriteLine($"Hello, {name}!");
+              // Console.WriteLine("Enter the first number = ");
+              // int n1 = int.Parse(Console.ReadLine());
+            
+              // Console.WriteLine("Enter the second nummber = ");
+              // string num2 = Console.ReadLine();   
+            
+              // int n2 = int.Parse(num2);
+            
+              // Console.WriteLine(n1 + n2);
+            
+              // int i = 10;
+              // long l = i;
+            
+              // dataypes should be compstible
+              // conerting from smaller to larger or equal 
+              // no possibility for dataloss or errors 
+            
+              // int age = 20;
+              // if(age >= 18)
+              // {
+              //    Console.WriteLine("You are legal.");
+              // }
+              // if(!age<18)
+              // {
+              //    Console.WriteLine("Legal");
+              // }
+            
+              // Console.WriteLine("Enter your mark:");
+              // int n1 = int.Parse(Console.ReadLine());
+              // if(n1 > 90)
+              // {
+              //     Console.WriteLine("A");
+              // }
+              // else if(n1 > 80)
+              // {
+              //   Console.WriteLine("B");
+              // }
+              // else if(n1 > 70)
+              // {
+              //     Console.WriteLine("C");
+              //  }
+              // else if(n1 > 60)
+              // {
+              //     Console.WriteLine("D");
+              // }
+              // else
+              // {
+              //     Console.WriteLine("F");
+              // }
+              // string s = "Hello";
+              // int l = s.Length;
+              // char c = s[0]; // first character
+              // char lc = s.last(); // advanced based on link
+              // char lc =s[s.Length - 1];
+            
+              // Console.Write("Enter your name: ");
+              // string name = Console.ReadLine();
+            
+              // for (int i = 0; i < name.Length; i++)
+              // {
+              //     char a = name[i];
+              //   if (a >= 'a' && a <= 'z')
+              //     {
+              //         Console.Write((char)(a - 32)); // in simple Console.Writeline(name.ToUpper());
+              //    }
+              /*
+              Console.WriteLine("Enter your name:");
+              string name = Console.ReadLine();
+              string newName = "";
+            
+              for (int i = 0; i < name.Length; i++)
+              {
+                  if (name[i] == ' ')
+                  {
+                      newName +='_';
+                  }
+                  else
+                  {
+                      newName += name[i];
+                  }
+              }
+              Console.WriteLine(newName);
+              */
+              /*string data = " This is a text";
+            
+              for (int i = 0; i < data.Length; i++)
+              {
+                  if (data[i] == '')
+                  {
+                      break;
+                  }
+                  Console.Write(data[i]);
+              }
+              Console.WriteLine();*/
+            
+              /*for (int i = 0; i < 11; i++)
+              {
+                  if (i % 2 != 0)
+                  {
+                      continue;
+                  }
+                  Console.WriteLine(i+ 10);
+              }*/
+            
+              /* int num = o;
+               while (true)
+               {
+                   Console.WriteLine("Enter numbers to add or q to exit");
+                   string data = Console.ReadLine();
+            
+                   if (data == 'Q')
+                   {
+                       break;
+                   }
+               }
+               Console.WriteLine(sum);*/
+            
+              /*Console.WriteLine("Enter the pattern:");
+              string pattern = Console.ReadLine();
+              int sum = 0;
+              for (int i = 0; i < pattern.Length; i++) // WHILE(I<PATTERN.lENGTH)
+                  //sum +=int.Parse(pattern[i].ToString());
+                  //i = i + 2;
+                  //console.writeline(sum)
+              {
+                  if (pattern[i] != '_')
+                  {
+                      sum = sum + int.Parse(pattern[i].ToString());
+                  }
+              }
+              Console.WriteLine(sum);
+              Console.WriteLine();*/
             /*
             Console.Write("Enter the height of the rectangle: ");
             int height = int.Parse(Console.ReadLine());
