@@ -1,0 +1,36 @@
+﻿Important Things Related to Databases
+
+Data Storage and Retrieval: Databases efficiently store and retrieve large amounts of data.
+
+Data Integrity: Ensures accuracy and consistency of data over its lifecycle.
+
+Security: Protects data from unauthorized access and breaches
+
+
+Scalability: Ability to handle growing amounts of data and users.
+
+Backup and Recovery: Ensures data can be restored in case of loss.
+
+Types of Databases: Relational (SQL) and Non-Relational (NoSQL)
+
+Top Databases and Their Uses by Companies
+MySQL: Used by Facebook for its social graph.
+
+PostgreSQL: Used by Twitter for its data storage needs.
+
+MongoDB: Popular for its flexibility and scalability, used by various companies
+
+Cassandra: Known for handling large amounts of data, used by companies like Netflix10.
+
+Redis: Used for caching and real-time analytics.
+
+Open Source Database Examples
+MySQL: Widely used relational database.
+
+PostgreSQL: Known for its powerful features and standards compliance.
+
+MongoDB: A popular NoSQL database for document storage.
+
+MariaDB: A fork of MySQL, known for its performance and reliability.
+
+SQLite: Lightweight database ideal for small applications.

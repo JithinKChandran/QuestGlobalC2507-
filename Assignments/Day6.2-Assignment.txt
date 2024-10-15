@@ -1,0 +1,9 @@
+﻿Types of Relationships in SQL:
+
+One-to-One: Each row in Table A is linked to one and only one row in Table B. Think like a person and their unique ID.
+
+One-to-Many: A row in Table A can have multiple corresponding rows in Table B, but a row in Table B is linked to only one row in Table A. Think like a single customer with multiple orders.
+
+Many-to-Many: Rows in Table A can have multiple corresponding rows in Table B and vice versa. This requires a junction table to handle. Think of students enrolled in multiple courses.
+
+Foreign Key Concept: A foreign key is a field (or collection of fields) in one table that uniquely identifies a row of another table. It's essentially a reference to the primary key in another table, helping maintain the referential integrity of data. For example, in a table of orders, the customer ID would be a foreign key pointing back to the unique ID in the customer table. It ensures that there's always a corresponding entry in the related table, preventing orphan records.
