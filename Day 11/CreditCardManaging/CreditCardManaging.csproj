@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A512C416-B2E8-4E52-8954-58842BAF3EC7}</ProjectGuid>
+    <ProjectGuid>{E028D813-5F6F-4D8C-88EC-3BE777A5E7C7}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Day11._1_CreditCard</RootNamespace>
-    <AssemblyName>Day11.1_CreditCard</AssemblyName>
+    <RootNamespace>CreditCardManaging</RootNamespace>
+    <AssemblyName>CreditCardManaging</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,8 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CCFunction.cs" />
     <Compile Include="CreditCard.cs" />
+    <Compile Include="CreditCardManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

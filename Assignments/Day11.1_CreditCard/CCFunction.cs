@@ -9,27 +9,6 @@ namespace Day11._1_CreditCard
     internal class CCFunction
     {
         private List<CreditCard> creditCards = new List<CreditCard>();
-
-        public class CreditCard
-        {
-            public int CardNumber;
-            public int ExpiryMonth;
-            public int ExpiryYear;
-            public int CVC;
-
-            public CreditCard(int cardNumber, int expiryMonth, int expiryYear, int cvc)
-            {
-                CardNumber = cardNumber;
-                ExpiryMonth = expiryMonth;
-                ExpiryYear = expiryYear;
-                CVC = cvc;
-            }
-
-            public void Display()
-            {
-                Console.WriteLine($"Card Number: {CardNumber}, Expiry: {ExpiryMonth}/{ExpiryYear}, CVC: {CVC}");
-            }
-        }
         public void AddCreditCard(int cardNumber, int expiryMonth, int expiryYear, int cvc)
         {
             creditCards.Add(new CreditCard(cardNumber, expiryMonth, expiryYear, cvc));

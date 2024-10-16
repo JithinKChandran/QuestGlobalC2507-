@@ -47,7 +47,7 @@ namespace Day11._1_CreditCard
         static void AddCreditCard(CCFunction user)
         {
             Console.WriteLine("Enter the card number:");
-            int cardNuber = int.Parse(Console.ReadLine());
+            int cardNumber = int.Parse(Console.ReadLine());
 
             Console.WriteLine("Enter the expiry month in MM");
             int expiryMonth = int.Parse(Console.ReadLine());
@@ -58,7 +58,7 @@ namespace Day11._1_CreditCard
             Console.WriteLine("Enter the CVC");
             int cvc = int.Parse(Console.ReadLine());
 
-            user.AddCreditCard(cardNuber, expiryMonth, expiryYear, cvc);
+            user.AddCreditCard(cardNumber, expiryMonth, expiryYear, cvc);
         }
 
         static void SearchCreditCard(CCFunction user)
