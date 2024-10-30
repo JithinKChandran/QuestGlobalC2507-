@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ECommerceCartManagement.Discounts
+namespace SocialMediaNotificationSystem.Interfaces
 {
-    public interface IDiscountStrategy
+    internal interface ILikeNotification
     {
-        decimal ApplyDiscount(decimal totalAmount);
+        void OnLikeNotificationReceived();
     }
 }

@@ -1,4 +1,5 @@
 ﻿using ECommerceCartManagement.Discounts;
+using ECommerceCartManagement.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,15 +10,19 @@ namespace ECommerceCartManagement.Services
 {
     public class BillingService
     {
-        public decimal CalculateTotal(Cart cart, IDiscountStrategy discountStrategy)
+        private readonly IDiscountStrategy _discountStrategy;
+
+        public BillingService(IDiscountStrategy discountStrategy)
         {
-            decimal total = 0;
-            foreach (var item in cart.GetItems())
-            {
-                total += item.Price * item.Quantity;
-            }
-            return discountStrategy.ApplyDiscount(total);
+            _discountStrategy = discountStrategy;
         }
+
+        public decimal CalculateTotalAmount(List<CartItem> cartItems)
+        {
+            var totalAmount = cartItems.Sum(i => i.TotalPrice);
+            return _discountStrategy.ApplyDiscount(totalAmount);
+        }
+
     }
 
 }

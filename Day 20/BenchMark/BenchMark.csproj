@@ -37,9 +37,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="BenchmarkDotNet, Version=0.14.0.0, Culture=neutral, PublicKeyToken=aa0ca2f9092cefc4, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\BenchmarkDotNet.0.14.0\lib\netstandard2.0\BenchmarkDotNet.dll</HintPath>
-    </Reference>
     <Reference Include="BenchmarkDotNet.Annotations, Version=0.14.0.0, Culture=neutral, PublicKeyToken=aa0ca2f9092cefc4, processorArchitecture=MSIL">
       <HintPath>..\..\packages\BenchmarkDotNet.Annotations.0.14.0\lib\netstandard2.0\BenchmarkDotNet.Annotations.dll</HintPath>
     </Reference>

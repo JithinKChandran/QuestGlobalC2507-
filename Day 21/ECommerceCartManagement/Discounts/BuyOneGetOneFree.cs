@@ -8,10 +8,7 @@ namespace ECommerceCartManagement.Discounts
 {
     public class BuyOneGetOneFree : IDiscountStrategy
     {
-        public decimal ApplyDiscount(decimal total)
-        {
-            return total / 2;
-        }
+        public decimal ApplyDiscount(decimal total) => total / 2;
     }
 
 }

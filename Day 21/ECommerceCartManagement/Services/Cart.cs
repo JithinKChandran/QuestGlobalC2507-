@@ -9,21 +9,25 @@ namespace ECommerceCartManagement.Services
 {
     public class Cart
     {
-        private List<CartItem> items;
-
-        public Cart()
-        {
-            items = new List<CartItem>();
-        }
+        private readonly List<CartItem> _items = new List<CartItem>();
 
         public void AddItem(CartItem item)
         {
-            items.Add(item);
+            var existingItem = _items.FirstOrDefault(i => i.Name == item.Name);
+            if (existingItem != null)
+            {
+                existingItem.Quantity += item.Quantity;
+            }
+            else
+            {
+                _items.Add(item);
+            }
+
         }
 
         public void UpdateItem(string itemName, int newQuantity)
         {
-            foreach (var item in items)
+            foreach (var item in _items)
             {
                 if (item.Name == itemName)
                 {
@@ -35,13 +39,10 @@ namespace ECommerceCartManagement.Services
 
         public void RemoveItem(string itemName)
         {
-            items.RemoveAll(item => item.Name == itemName);
+            _items.RemoveAll(item => item.Name == itemName);
         }
 
-        public List<CartItem> GetItems()
-        {
-            return items;
-        }
+        public List<CartItem> GetItems() => _items;
     }
 
 }

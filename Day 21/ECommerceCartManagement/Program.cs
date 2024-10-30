@@ -17,12 +17,10 @@ namespace ECommerceCartManagement
             cart.AddItem(new CartItem { Name = "Item1", Quantity = 2, Price = 50 });
             cart.AddItem(new CartItem { Name = "Item2", Quantity = 1, Price = 30 });
 
-            var billingService = new BillingService();
-
-            IDiscountStrategy discountStrategy = new PercentageDiscount(10); // 10% discount
-            decimal total = billingService.CalculateTotal(cart , discountStrategy);
-
-            Console.WriteLine("Total with Discount: " + total);
+            var discountStrategy = new PercentageDiscount();
+            var billingService = new BillingService(discountStrategy);
+            var totalAmount = billingService.CalculateTotalAmount(cart.GetItems());
+            Console.WriteLine($"Total amount: {totalAmount}");
         }
     }
 }

@@ -8,17 +8,9 @@ namespace ECommerceCartManagement.Discounts
 {
     public class PercentageDiscount : IDiscountStrategy
     {
-        private readonly decimal _percentage;
+        private readonly decimal _discountPercentage = 2;
+        public decimal ApplyDiscount(decimal totalAmount) => totalAmount - (totalAmount * _discountPercentage / 100);
 
-        public PercentageDiscount(decimal percentage)
-        {
-            _percentage = percentage;
-        }
-
-        public decimal ApplyDiscount(decimal total)
-        {
-            return total - (total * _percentage / 100);
-        }
     }
 
 }

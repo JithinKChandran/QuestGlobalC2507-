@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using BenchmarkDotNet.Attributes
+
 namespace BenchMark
 {
     public class ArrayAndSpan
     {
-        [BenchMark]
+        [Benchmark]
         public void TestList()
         {
             var lst = new List<int>();
@@ -18,7 +18,7 @@ namespace BenchMark
             }
         }
 
-        [BenchMark]
+        [Benchmark]
         public void TestArray()
         {
             var arr = new int[10];
