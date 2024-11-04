@@ -10,24 +10,25 @@ namespace Net
 {
     internal class Program
     {
-        static void MakeRequestUser()
+        static async Task MakeRequestUser()
         {
             string targetUrl = "https://jsonplaceholder.typicode.com/users";
             var client = new HttpClient();
-            var response = client.GetAsync(targetUrl).Result;
+            var response = await client.GetAsync(targetUrl);
             response.EnsureSuccessStatusCode();
 
-            var responseContent = response.Content.ReadAsStringAsync().Result;
+            var responseContent = await response.Content.ReadAsStringAsync();
             Console.WriteLine(responseContent);
         }
-        static void MakeRequestPost(int id)
+
+        static async Task MakeRequestPost(int id)
         {
             string targetUrl = $"https://jsonplaceholder.typicode.com/posts/{id}";
             var client = new HttpClient();
-            var response = client.GetAsync(targetUrl).Result;
+            var response = await client.GetAsync(targetUrl);
             response.EnsureSuccessStatusCode();
 
-            var responseContent = response.Content.ReadAsStringAsync().Result;
+            var responseContent = await response.Content.ReadAsStringAsync();
             Console.WriteLine(responseContent);
         }
 
@@ -52,7 +53,7 @@ namespace Net
 
         // Cancellation Token.
 
-        static async Task LongRunningactivity(CancellationToken cancellationToken)
+        static async Task LongRunningActivity(CancellationToken cancellationToken)
         {
             int downloadPercent = 0;
             while (downloadPercent < 101)
@@ -62,14 +63,15 @@ namespace Net
                     Console.WriteLine("Cancelling download");
                     break;
                 }
-                Console.WriteLine("Downloading... "+ downloadPercent++ + "%");
+                Console.WriteLine("Downloading... " + downloadPercent++ + "%");
                 await Task.Delay(2500);
             }
         }
+
         public static async Task Main(string[] args)
         {
-            MakeRequestUser();
-            MakeRequestPost(1);
+            await MakeRequestUser();
+            await MakeRequestPost(1);
 
             for (int i = 1; i < 10; i++)
             {
@@ -81,16 +83,16 @@ namespace Net
             tasks.Add(Task.Run(() => Multiply(5)));
             tasks.Add(Task.Run(() => Multiply(8)));
 
-            int[] results = await Task .WhenAll(tasks);
+            int[] results = await Task.WhenAll(tasks);
             Console.WriteLine(string.Join(", ", results));
 
-            var cancellationToken = new CancellationToken();
-            var task = LongRunningactivity(cancellationToken.Token);
+            var cancellationTokenSource = new CancellationTokenSource();
+            var task = LongRunningActivity(cancellationTokenSource.Token);
 
             Console.WriteLine("Press q to exit:");
             if (Console.ReadKey().KeyChar == 'q')
             {
-                cancellationToken.Cancel();
+                cancellationTokenSource.Cancel();
             }
 
             await task;
