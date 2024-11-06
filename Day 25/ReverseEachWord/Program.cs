@@ -13,6 +13,8 @@ namespace ReverseEachWord
             string input = "Hello c# hello world hello";
             StringBuilder output = new StringBuilder();
             string[] strings = input.Split(' ');
+            // var revWord = strings.Select(x => new string(x.Reverse().ToArray()));
+            // string res = string.Join(" ", revWord);
             foreach (var s in strings)
             {
                 string result = " ";
