@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StackUsingList;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,17 +11,21 @@ namespace StackUsingList
     {
         static void Main(string[] args)
         {
-            StackUsingList stack = new StackUsingList();
+            try
+            {
+                var stackUsingList = new StackUsingList<int>();
+                stackUsingList.Push(1);
+                stackUsingList.Push(2);
+                stackUsingList.Push(3);
 
-            stack.Push(100);
-            stack.Push(200);
-            stack.Push(300);
-            stack.Display();
-
-            Console.WriteLine($"Peeked value: {stack.Peek()}");
-
-            stack.Pop();
-            stack.Display();
+                Console.WriteLine(stackUsingList.Pop());
+                Console.WriteLine(stackUsingList.Pop()); 
+                Console.WriteLine(stackUsingList.Peek()); 
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
     }
 }

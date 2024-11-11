@@ -1,72 +1,42 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace StackUsingList
 {
-    public class StackUsingList
+    public class StackUsingList<T>
     {
-        private List<int> stack;
+        private readonly List<T> _items = new List<T>();
 
-        public StackUsingList()
+        public void Push(T item)
         {
-            stack = new List<int>();
+            _items.Add(item);
         }
 
-        // Push an element onto the stack
-        public void Push(int value)
+        public T Pop()
         {
-            stack.Add(value);
-            Console.WriteLine($"{value} pushed onto stack.");
-        }
-
-        // Pop an element from the stack
-        public int Pop()
-        {
-            if (IsEmpty())
+            if (_items.Count == 0)
             {
-                Console.WriteLine("Underflow.");
-                return -1;
-            }
-            int value = stack[stack.Count - 1];
-            stack.RemoveAt(stack.Count - 1);
-            Console.WriteLine($"{value} popped from stack.");
-            return value;
-        }
-
-        // Peek at the top element without removing it
-        public int Peek()
-        {
-            if (IsEmpty())
-            {
-                Console.WriteLine("Stack is empty.");
-                return -1;
-            }
-            return stack[stack.Count - 1];
-        }
-
-        // Check if the stack is empty
-        public bool IsEmpty()
-        {
-            return stack.Count == 0;
-        }
-
-        // Display stack contents
-        public void Display()
-        {
-            if (IsEmpty())
-            {
-                Console.WriteLine("Stack is empty.");
-                return;
+                throw new StackEmptyException();
             }
 
-            Console.WriteLine("Stack elements:");
-            for (int i = stack.Count - 1; i >= 0; i--)
-            {
-                Console.WriteLine(stack[i]);
-            }
+            int lastIndex = _items.Count - 1;
+            T item = _items[lastIndex];
+            _items.RemoveAt(lastIndex);
+            return item;
         }
+
+        public T Peek()
+        {
+            if (_items.Count == 0)
+            {
+                throw new StackEmptyException();
+            }
+
+            return _items[_items.Count - 1];
+        }
+
+        public int Count => _items.Count;
     }
 }
